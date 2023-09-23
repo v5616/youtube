@@ -1,0 +1,67 @@
+.sub-categori .left-area .filter-result-area {
+    border: 1px solid rgba(0, 0, 0, 0.2) !important;
+}
+.sub-categori .left-area .filter-result-area .header-area {
+    text-align: center;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px 0px 7px;
+    background: #ff5328;
+}
+.sub-categori .left-area .filter-result-area .header-area .title {
+    font-size: 16px;
+    font-weight: 600;
+    display: inline-block;
+    color: #fff;
+}
+
+.filter-btn {
+    width: 160px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    background: #ff5328;
+    border: 0px;
+    border-radius: 50px;
+    display: block;
+    margin: 0 auto;
+    transition: all 0.3s ease-in;
+    border: 1px solid #ff5328;
+    cursor: pointer;
+}
+.filter-btn:hover {   
+    color: #ff5328;
+    background: #fff;   
+}
+.sub-categori .all-categories-area .body-area .accordion .card {
+    padding: 7px 0px 0px;
+    border-radius: 0px;
+    border: 0px;
+    border-top: 1px dashed rgba(0, 0, 0, 0.5);
+}
+.sub-categori .all-categories-area .body-area .accordion .card .card-header {
+    background: #fff;
+    cursor: pointer;
+}
+.sub-categori .all-categories-area .body-area .accordion .card .card-header .button {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color:black
+}
+.form-check .form-check-input {
+    box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25) !important;
+}
+.form-check .form-check-input:checked {
+    background-color: gray!important;
+    border-color: black !important;
+}
+.sub-categori .left-area .categori-select-area .body-area select {
+    border: 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    height: 35px;
+    width: 100%;
+}

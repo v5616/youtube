@@ -1,0 +1,17 @@
+# GET http://localhost:4000/products
+
+
+# create rpoduct 
+ 
+POST http://localhost:4000/products
+Content-Type: application/json
+
+{
+    "name":"Akshay",
+    "revenue":20000,
+    "language":"Hindi",
+    "monetized":true,
+    "category":"Gaming",
+    "subscriber":42365432,
+    "tag":"offer"
+}
