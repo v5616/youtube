@@ -211,175 +211,46 @@ const Home = () => {
       </Container>
 
       <div className="mt-4 " style={{ backgroundColor: "#2e0245a3" }}>
-        <Container className="py-3">
-          <div className="pb-2">
-            <h5
-              className="text-center"
-              style={{ fontSize: "30px", fontWeight: "650", color: "white" }}
-            >
-              Why YTSHOPINDIA?
-            </h5>
+      <div className="container">
+        <div className="row serv_sec why">
+          <div className="chl_det col-md-6 col-sm-12 col-lg-4">
+            <div className="srv"> <img src="admin/images/icons8-verified-96.png" />
+              <h4 style={{color: '#04649c'}}>Verified Listings </h4>
+              <p>At Channelkart, we take the authenticity and reliability of the properties we list for sale seriously. Our team thoroughly examines and verifies all YouTube channels before they are made available on our marketplace.</p>
+            </div>
           </div>
-          <div className="whydiv my-2">
-            <Row>
-              <Col lg={12}>
-                <Row>
-                  <Col className="verifiedlist" lg={3}>
-                    <span>
-                      <img alt=""
-                        style={{ width: "35px", height: "36px" }}
-                        src={verified}
-                      />
-
-                      <h4 className="verifiedheading">Verified Listings</h4>
-                    </span>
-                  </Col>
-                  <Col lg={9}>
-                    <p className="fw-20">
-                      At YtShopIndia, we take the authenticity and reliability
-                      of the properties we list for sale seriously. Our team
-                      thoroughly examines and verifies all YouTube channels
-                      before they are made available on our marketplace.
-                    </p>
-                  </Col>
-                </Row>
-              </Col>
-            </Row>
+          <div className="chl_det col-md-6 col-sm-12 col-lg-4">
+            <div className="srv"> <img src="admin/images/sr-privacy.png" />
+              <h4 style={{color: '#04649c'}}>Safe &amp; Secure Deals</h4>
+              <p>For us the trust of our customers is utmost priority and we take it very seriously. We use all possible means to make the each and every deal smooth and fully secured for both the buyer and seller.</p>
+            </div>
           </div>
-          <div className="whydiv my-2">
-            <Row>
-              <Col lg={12}>
-                <Row>
-                  <Col className="verifiedlist" lg={3}>
-                    <span>
-                      <img alt=""
-                        style={{ width: "35px", height: "36px" }}
-                        src={privacy}
-                      />
-
-                      <h4 className="verifiedheading">Safe & Secure Deals</h4>
-                    </span>
-                  </Col>
-                  <Col lg={9}>
-                    <p className="fw-20">
-                      For us the trust of our customers is utmost priority and
-                      we take it very seriously. We use all possible means to
-                      make the each and every deal smooth and fully secured for
-                      both the buyer and seller.
-                    </p>
-                  </Col>
-                </Row>
-              </Col>
-            </Row>
+          <div className="chl_det col-md-6 col-sm-12 col-lg-4">
+            <div className="srv"> <img src="admin/images/sr-easy-process.png" />
+              <h4 style={{color: '#04649c'}}>Easy Process </h4>
+              <p>At our company, we make the process of buying and selling as seamless as possible. Our user-friendly platform and dedicated support team are always on hand to assist you every step of the way.</p>
+            </div>
           </div>
-          <div className="whydiv my-2">
-            <Row>
-              <Col lg={12}>
-                <Row>
-                  <Col className="verifiedlist" lg={3}>
-                    <span>
-                      <img alt=""
-                        style={{ width: "35px", height: "36px" }}
-                        src={easyProcess}
-                      />
-
-                      <h4 className="verifiedheading">Easy Process</h4>
-                    </span>
-                  </Col>
-                  <Col lg={9}>
-                    <p className="fw-20">
-                      At our company, we make the process of buying and selling
-                      as seamless as possible. Our user-friendly platform and
-                      dedicated support team are always on hand to assist you
-                      every step of the way.
-                    </p>
-                  </Col>
-                </Row>
-              </Col>
-            </Row>
+          <div className="chl_det col-md-6 col-sm-12 col-lg-4">
+            <div className="srv"> <img src="admin/images/sr-valuation.png" />
+              <h4 style={{color: '#04649c'}}>Free Valuation </h4>
+              <p>Maximize the value of your channel with the help of our expert team. With years of experience and expertise, our team is dedicated to providing you with the best possible valuation of your channel. We consider all important factors while evaluating your channel.</p>
+            </div>
           </div>
-          <div className="whydiv my-2">
-            <Row>
-              <Col lg={12}>
-                <Row>
-                  <Col className="verifiedlist" lg={3}>
-                    <span>
-                      <img alt=""
-                        style={{ width: "35px", height: "36px" }}
-                        src={free}
-                      />
-
-                      <h4 className="verifiedheading">Free Valuation</h4>
-                    </span>
-                  </Col>
-                  <Col lg={9}>
-                    <p className="fw-20">
-                      Maximize the value of your channel with the help of our
-                      expert team. With years of experience and expertise, our
-                      team is dedicated to providing you with the best possible
-                      valuation of your channel. We consider all important
-                      factors while evaluating your channel.
-                    </p>
-                  </Col>
-                </Row>
-              </Col>
-            </Row>
+          <div className="chl_det col-md-6 col-sm-12 col-lg-4">
+            <div className="srv"> <img src="admin/images/sr-proven-track-record.png" />
+              <h4 style={{color: '#04649c'}}>Proven Track Record </h4>
+              <p>Experience the power of a proven platform. With over 2000 content creators having already made successful deals on our marketplace, you can trust that our platform has a solid track record of facilitating safe and secure transactions.</p>
+            </div>
           </div>
-          <div className="whydiv my-2">
-            <Row>
-              <Col lg={12}>
-                <Row>
-                  <Col className="verifiedlist" lg={3}>
-                    <span>
-                      <img alt=""
-                        style={{ width: "35px", height: "36px" }}
-                        src={overtrack}
-                      />
-
-                      <h4 className="verifiedheading">Proven Track Record</h4>
-                    </span>
-                  </Col>
-                  <Col lg={9}>
-                    <p className="fw-20">
-                      Experience the power of a proven platform. With over 2000
-                      content creators having already made successful deals on
-                      our marketplace, you can trust that our platform has a
-                      solid track record of facilitating safe and secure
-                      transactions.
-                    </p>
-                  </Col>
-                </Row>
-              </Col>
-            </Row>
+          <div className="chl_det col-md-6 col-sm-12 col-lg-4">
+            <div className="srv"> <img src="admin/images/sr-support.png" />
+              <h4 style={{color: '#04649c'}}>Help Desk </h4>
+              <p>Our expert customer support team is dedicated to helping you navigate the buying and selling process. Available to assist you with any queries, our team is committed to providing you with the best possible service by making your journey more smooth.</p>
+            </div>
           </div>
-          <div className="whydiv my-2">
-            <Row>
-              <Col lg={12}>
-                <Row>
-                  <Col className="verifiedlist" lg={3}>
-                    <span>
-                      <img alt=""
-                        style={{ width: "35px", height: "36px" }}
-                        src={stack}
-                      />
-
-                      <h4 className="verifiedheading">Help Desk</h4>
-                    </span>
-                  </Col>
-                  <Col lg={9}>
-                    <p className="fw-20">
-                      Our expert customer support team is dedicated to helping
-                      you navigate the buying and selling process. Available to
-                      assist you with any queries, our team is committed to
-                      providing you with the best possible service by making
-                      your journey more smooth.
-                    </p>
-                  </Col>
-                </Row>
-              </Col>
-            </Row>
-          </div>
-        </Container>
+        </div>
+      </div>
       </div>
       <Container className="my-4">
         <Row>

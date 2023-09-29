@@ -1,8 +1,9 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap');
 * body{
   font-size: 0.875rem;
   line-height: 1.6;
-  font-family: "Poppins", Helvetica, sans-serif;
+  font-family: "Poppins", Helvetica, sans-serif !important;
   color: #555;
 
 }
@@ -439,7 +440,35 @@ article p {
   transition: 0.3s;
   vertical-align: top;
 }
-
+/* why homepage css */
+.row.serv_sec {
+  padding: 0 0 0px 0;
+}
+.chl_det {
+  margin-bottom: 30px;
+}
+.row.serv_sec.why .srv:hover {
+  border-style: solid;
+  border-width: 4px;
+  border-color: #aba4a6;
+  box-shadow: 0px 0px 41px 0px rgb(0 0 0 / 5%);
+}
+.row.serv_sec.why .srv {
+  /* column-gap: 33px !important; */
+  border: 4px solid transparent;
+  padding: 34px 25px;
+  border-bottom-right-radius: 137px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.06);
+  transition: 0.3s;
+  border-top-left-radius: 146px;
+}
+.srv {
+  background-color: #fff;
+  /* padding: 25px 25px 0px; */
+  text-align: center;
+  /* margin-bottom: 35px; */
+  height: 100%;
+}
 /* @media screen and (max-width:700px) {
   .container {
       height: auto;
