@@ -12,13 +12,13 @@ import userprofie from "../../images/users-icon.png";
 import lang from "../../images/lang.png";
 import reviewimage from "../../images/firstcardimg.png";
 import monetization from "../../images/monetization.png";
-import verified from "../../images/icons8-verified-96.png";
+import verified from "../../images/iconverified.png";
 import privacy from "../../images/sr-privacy.png";
 import easyProcess from "../../images/sr-easy-process.png";
 import free from "../../images/sr-valuation.png";
 import overtrack from "../../images/sr-proven-track-record.png";
 import stack from "../../images/sr-support.png";
-import imagefirst from "../../images/youtube-removebg-preview.png";
+import imagefirst from "../../images/EDUTAINMENT.png";
 import imagesecond from "../../images/secondcardimg.jpg";
 import imagethird from "../../images/thirdcardimg.png";
 import imagefourth from "../../images/fourthcardimg.png";
@@ -45,7 +45,7 @@ const Home = () => {
     <>
     {loader ? <Skeleton count={100} />:
     <>
-      <section id="home_bnr">
+      {/* <section id="home_bnr">
         <div className="container">
           <div className="row bnr_cnt">
             <div className="col-md-7">
@@ -69,10 +69,35 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
-      <div>
-        <Container>
-          <div className="row py-5">
+       
+      </section> */}
+      <div className="bannerimg">
+        <div className="bannercolor">
+          
+          </div>
+          <Container>
+          <div className="heading">
+          <h1 className="text-white">
+                The Most Trusted Platform to <br />
+                <span> Buy &amp; Sell </span> Established <br />
+                <b>Youtube Channel</b>
+              </h1>
+              <div className="bnr_btn">
+                <Link to="/buy_channel">
+                  <Button className="fill_btn">Buy Channel <i class="fas fas fa-arrow-right ps-3"></i></Button>
+                </Link>
+                <Link to="/sell_YouTubeChannel">
+                  <Button className="fill_btn sell-btn">Sell Channel <i class="fas fas fa-arrow-right ps-3 " style={{color:"#ff5700"}}></i></Button>
+                </Link>
+              </div>
+          </div>
+          </Container>
+          
+          </div>
+          
+      <section >
+        <Container className="search-form " >
+          <div className="row py-4 home_details">
             <div className="col-md-4 col-sm-6 col-6">
               <div class="counter green">
                 <div class="counter-content d-flex align-items-center justify-content-center">
@@ -116,9 +141,10 @@ const Home = () => {
             </div>
           </div>
         </Container>
-      </div>
-      <Container className="mt-5">
-        <div>
+        
+      </section>
+      <Container className="mt-2">
+        <div className="dt-sc-title with-two-border text-center pb-2">
           <h3 className=" text-center">Recently Listed Channels</h3>
         </div>
         <div className="chnl_grid row mt-">
@@ -208,44 +234,50 @@ const Home = () => {
             VIEW ALL CHANNEL
           </Button>
         </div>
-      </Container>
-
-      <div className="mt-4 " style={{ backgroundColor: "#2e0245a3" }}>
+      </Container> 
+<section> 
+  </section>
+      <div className="mt-4 why_ytshopindia" >
       <div className="container">
-        <div className="row serv_sec why">
+        <div className="dt-sc-title with-two-border text-center pb-2">
+          <h2 style={{}} >  WHY YTSHOPINDIA</h2>
+        </div>
+        <div className="row serv_sec why pt-2">
           <div className="chl_det col-md-6 col-sm-12 col-lg-4">
-            <div className="srv"> <img src="admin/images/icons8-verified-96.png" />
-              <h4 style={{color: '#04649c'}}>Verified Listings </h4>
+            <div className="srv text-center"> 
+            <span ><img className="rotate_img" src={verified}/></span>
+              <h4 className="text-dark" >Verified Listings </h4>
               <p>At Channelkart, we take the authenticity and reliability of the properties we list for sale seriously. Our team thoroughly examines and verifies all YouTube channels before they are made available on our marketplace.</p>
             </div>
           </div>
           <div className="chl_det col-md-6 col-sm-12 col-lg-4">
-            <div className="srv"> <img src="admin/images/sr-privacy.png" />
-              <h4 style={{color: '#04649c'}}>Safe &amp; Secure Deals</h4>
+          <div className="srv text-center"> 
+          <span ><img className="rotate_img" src={privacy}/></span>
+              <h4 className=" text-dark">Safe &amp; Secure Deals</h4>
               <p>For us the trust of our customers is utmost priority and we take it very seriously. We use all possible means to make the each and every deal smooth and fully secured for both the buyer and seller.</p>
             </div>
           </div>
           <div className="chl_det col-md-6 col-sm-12 col-lg-4">
-            <div className="srv"> <img src="admin/images/sr-easy-process.png" />
-              <h4 style={{color: '#04649c'}}>Easy Process </h4>
+            <div className="srv text-center"> <span> <img className="rotate_img" src={easyProcess}/></span>
+              <h4 className=" text-dark">Easy Process </h4>
               <p>At our company, we make the process of buying and selling as seamless as possible. Our user-friendly platform and dedicated support team are always on hand to assist you every step of the way.</p>
             </div>
           </div>
           <div className="chl_det col-md-6 col-sm-12 col-lg-4">
-            <div className="srv"> <img src="admin/images/sr-valuation.png" />
-              <h4 style={{color: '#04649c'}}>Free Valuation </h4>
+            <div className="srv text-center">  <span ><img className="rotate_img" src={free}/></span>
+              <h4 className="text-dark">Free Valuation </h4>
               <p>Maximize the value of your channel with the help of our expert team. With years of experience and expertise, our team is dedicated to providing you with the best possible valuation of your channel. We consider all important factors while evaluating your channel.</p>
             </div>
           </div>
           <div className="chl_det col-md-6 col-sm-12 col-lg-4">
-            <div className="srv"> <img src="admin/images/sr-proven-track-record.png" />
-              <h4 style={{color: '#04649c'}}>Proven Track Record </h4>
+            <div className="srv text-center">  <span ><img className="rotate_img" src={overtrack}/></span>
+              <h4 className="text-dark">Proven Track Record </h4>
               <p>Experience the power of a proven platform. With over 2000 content creators having already made successful deals on our marketplace, you can trust that our platform has a solid track record of facilitating safe and secure transactions.</p>
             </div>
           </div>
           <div className="chl_det col-md-6 col-sm-12 col-lg-4">
-            <div className="srv"> <img src="admin/images/sr-support.png" />
-              <h4 style={{color: '#04649c'}}>Help Desk </h4>
+            <div className="srv text-center">  <span ><img className="rotate_img" src={stack}/></span>
+              <h4 className="text-dark">Help Desk </h4>
               <p>Our expert customer support team is dedicated to helping you navigate the buying and selling process. Available to assist you with any queries, our team is committed to providing you with the best possible service by making your journey more smooth.</p>
             </div>
           </div>
@@ -328,6 +360,21 @@ const Home = () => {
           </Container>
         </Row>
       </Container>
+
+
+      <Container>
+        <div className="col-4 ">
+          <div className="latest_blog_img" >
+            <img className="w-100 h-100" src={imagesecond}/>
+          </div>
+          <div className="latest_blog_pharagrah">
+            <h4> How to move youtube channel to brand account?</h4>
+            <p> Moving a YouTube channel to brand account can be easy,
+                          but it also involves some risk. Typically, people use
+                          this process to either transfer their..</p>
+          </div>
+        </div>
+        </Container>
       <div className="mt-5" style={{ backgroundColor: "#2e0245a3" }}>
         {/* Main Container for Clients Review */}
         <div className="container">

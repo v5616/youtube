@@ -4,13 +4,129 @@
   font-size: 0.875rem;
   line-height: 1.6;
   font-family: "Poppins", Helvetica, sans-serif !important;
-  color: #555;
+  color: #585860 !important;
 
 }
 @media (min-width: 768px) and (max-width: 1024px){
 .homecustom-container {
     max-width: 790px;
 }}
+
+/* new home  page  css*/
+.bannerimg{
+  background-image: url("./images/youtubemarketing2.png");
+  background-position: bottom;
+    height: 500px;
+    width: 100%;
+    position: relative;
+    background-size: cover;
+}
+.bannercolor{
+position: absolute;
+left:0px ;
+right:0px ;
+bottom: 0px;
+top:0px ;
+background-color: black;
+opacity: 0.7;
+}
+.heading{
+  position: absolute;
+  z-index: 111111;
+  left: 20%;
+  transform: translate(-206px, 50%);
+}
+.heading h1{
+  font-size: 40px;
+  font-weight: 400;
+}
+.bnr_btn .fill_btn {
+  padding: 13px 34px;
+  background-color: #ff5700 !important;
+    border-color: #ff5700 !important;
+  margin: 20px 10px 0 0;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 400;
+}
+.bnr_btn .sell-btn {
+  background-color: white!important;
+    border-color: white !important;
+    color:black
+}
+.bnr_btn .sell-btn:hover{
+  color:#000
+}
+.home_details{
+  padding: 30px 45px;
+  border-radius: 2px;
+  background-color: white;
+  box-shadow: 0 3px 32px 8px rgba(0, 0, 0, 0.12);
+}
+.search-form {
+  display: block;
+  z-index: 1;
+  position: relative;
+  top:  -55px;;
+}
+.why_ytshopindia h4{
+  font-size: 23px ;
+  font-weight:600
+}
+.dt-sc-title.with-two-border > * {
+  position: relative;
+  display: inline-block;
+  font-size: 41px;
+  font-weight: 600;
+  color:#000;
+}
+.dt-sc-title.with-two-border > *:before {
+  right: 100%;
+  transform: translateX(-30px);
+}
+.dt-sc-title.with-two-border > *:after {
+  left: 100%;
+  transform: translateX(30px);
+}
+.dt-sc-title.with-two-border > *:before, .dt-sc-title.with-two-border > *:after {
+  content: "";
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  width: 100px;
+  height: 2px;
+  background-color: #ff5700;
+}
+/* rotateicon css */
+.rotate_img:hover{
+  animation: rotateicon 4s linear ;
+}
+@keyframes rotateicon{
+  from { transform: rotate(0deg); }
+  to {transform: rotate(360deg);}
+}
+/* end */
+.latest_blog_img{
+  line-height: 0;
+  margin: 0 0 20px;
+  width: 100%;
+}
+.latest_blog_pharagrah {
+  width: 70%;
+  background: #fff;
+  padding: 30px;
+  z-index: 9;
+  top: -64px;
+  left: 63px;
+  position: relative;
+  box-shadow: 3px 3px 3px 3px #ff532896;
+}
+.latest_blog_pharagrah:hover {
+  box-shadow: 3px 3px 0px 0px #ff5328b5;
+  transition: all 0.3s linear 0s;
+}
 /* Blog page css */
 .mobile-display{display:none}
 .desktop-display{display:block}
@@ -427,21 +543,9 @@ article p {
 #home_bnr h1 b {
   font-size: 45px;
 }
-.bnr_btn .fill_btn {
-  background-color: white;
-  border-radius: 30px;
-  padding: 10px 25px;
-  color:black !important;
-  margin: 20px 10px 0 0;
-  display: inline-block;
-  text-transform: uppercase;
-  font-size: 13px;
-  letter-spacing: 2px;
-  transition: 0.3s;
-  vertical-align: top;
-}
+
 /* why homepage css */
-.row.serv_sec {
+/* .row.serv_sec {
   padding: 0 0 0px 0;
 }
 .chl_det {
@@ -452,23 +556,23 @@ article p {
   border-width: 4px;
   border-color: #aba4a6;
   box-shadow: 0px 0px 41px 0px rgb(0 0 0 / 5%);
-}
-.row.serv_sec.why .srv {
-  /* column-gap: 33px !important; */
+} */
+/* .row.serv_sec.why .srv {
+ 
   border: 4px solid transparent;
   padding: 34px 25px;
   border-bottom-right-radius: 137px;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.06);
   transition: 0.3s;
   border-top-left-radius: 146px;
-}
-.srv {
+} */
+/* .srv {
   background-color: #fff;
-  /* padding: 25px 25px 0px; */
+
   text-align: center;
-  /* margin-bottom: 35px; */
+
   height: 100%;
-}
+} */
 /* @media screen and (max-width:700px) {
   .container {
       height: auto;
