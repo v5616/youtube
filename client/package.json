@@ -10,6 +10,7 @@
     "axios": "^1.5.0",
     "bootstrap": "^5.3.1",
     "font-awesome": "^4.7.0",
+    "material-design-icons": "^3.0.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.8.0",
     "react-dom": "^18.2.0",
@@ -19,6 +20,7 @@
     "react-loader-spinner": "^5.4.5",
     "react-loading-skeleton": "^3.3.1",
     "react-range-slider-input": "^3.0.7",
+    "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.15.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"

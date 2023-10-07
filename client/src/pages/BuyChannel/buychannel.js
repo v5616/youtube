@@ -328,7 +328,7 @@ const BuyYouTubechannel = () => {
               </ul>
             </div>
           </div>
-          <div className="categori-select-area filter-result-area mt-3">
+          {/* <div className="categori-select-area filter-result-area mt-3">
             <div className="header-area">
               <h4 className="title">
                 Audience Age
@@ -374,7 +374,7 @@ const BuyYouTubechannel = () => {
                 <option value={7}>Non - Monetization</option>
               </select>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
               

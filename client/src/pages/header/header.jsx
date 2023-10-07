@@ -23,10 +23,13 @@ function Navbar() {
       <header className="App-header">
         <nav className={`${styles.navbar} `}>
           {/* logo */}
+          <div>
           <Link to = "/">
             <img alt=""  className={`${styles.logo}`} src={logo} />
           </Link>
-          <ul className={`${styles.navMenu} ${isActive ? styles.active : ""}`}>
+          </div>
+          <div>
+          <ul className={`${styles.navMenu} ${isActive ? styles.active : ""} m-0 p-0`}>
             <li onClick={removeActive}>
               <Link to="/" className={styles.navvlink}>
                 <h6 className={`${styles.navLink} m-0 `}>Home</h6>
@@ -69,6 +72,12 @@ function Navbar() {
                 <h6 className={`${styles.navLink} m-0 `}>About</h6>{" "}
               </Link>
             </li>
+            <li className="text-nowrap"  onClick={removeActive}>
+              <Link to="/Contact" className={styles.navvlink}>
+                {" "}
+                <h6 className={`${styles.navLink} m-0 `}>Contact Us</h6>{" "}
+              </Link>
+            </li>
             <li className="text-nowrap" onClick={removeActive}>
               <Link to="/sell_Channel" className={styles.navvlink}>
                 {" "}
@@ -78,6 +87,8 @@ function Navbar() {
               </Link>
             </li>
           </ul>
+          </div>
+          
 
           <div
             className={`${styles.hamburger} ${isActive ? styles.active : ""}`}
