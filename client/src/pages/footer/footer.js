@@ -1,146 +1,171 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-
+import React from "react";
+import { Link } from "react-router-dom";
+import Logo from "../../images/footerlogo.png";
+import "./style.css"
 const Footer = () => {
   return (
     <>
-    <>
-  {/* Footer */}
-  <footer className="text-center text-lg-start bg-white text-muted " >
-    {/* Section: Social media */}
-    <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-      {/* Left */}
-      <div className="me-5 d-none d-lg-block">
-        <span>Get connected with us on social networks:</span>
-      </div>
-      {/* Left */}
-      {/* Right */}
-      <div>
-       <Link to="" className="me-4 link-secondary">
-          <i className="fab fa-facebook-f" />
-        </Link>
-       <Link to="" className="me-4 link-secondary">
-          <i className="fab fa-twitter" />
-        </Link>
-       <Link to="" className="me-4 link-secondary">
-          <i className="fab fa-google" />
-        </Link>
-       <Link to="" className="me-4 link-secondary">
-          <i className="fab fa-instagram" />
-        </Link>
-       <Link to="" className="me-4 link-secondary">
-          <i className="fab fa-linkedin" />
-        </Link>
-       <Link to="" className="me-4 link-secondary">
-          <i className="fab fa-github" />
-        </Link>
-      </div>
-      {/* Right */}
-    </section>
-    {/* Section: Social media */}
-    {/* Section: Links  */}
-    <section className="">
-      <div className="container text-center text-md-start mt-5">
-        {/* Grid row */}
-        <div className="row mt-3">
-          {/* Grid column */}
-          <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-            {/* Content */}
-            <h6 className="text-uppercase fw-bold mb-4">
-              <i className="fas fa-gem me-3 text-secondary" />
-             YTSHOPINDIA
-            </h6>
-            <p>
-              We help you to find best youtube channels to your growth
-            </p>
+      <footer className="footer-section">
+        <div className="container">
+          <div className="footer-cta pt-5 pb-5">
+            <div className="row">
+              <div className="col-xl-4 col-md-4 mb-30">
+                <div className="single-cta">
+                  <i className="fas fa-map-marker-alt" />
+                  <div className="cta-text">
+                    <h4>Find us</h4>
+                    <span>1010 Avenue, sw 54321, chandigarh</span>
+                  </div>
+                </div>
+              </div>
+              <div className="col-xl-4 col-md-4 mb-30">
+                <div className="single-cta">
+                  <i className="fas fa-phone" />
+                  <div className="cta-text">
+                    <h4>Call us</h4>
+                    <span>9876543210 0</span>
+                  </div>
+                </div>
+              </div>
+              <div className="col-xl-4 col-md-4 mb-30">
+                <div className="single-cta">
+                  <i className="far fa-envelope-open" />
+                  <div className="cta-text">
+                    <h4>Mail us</h4>
+                    <span>mail@info.com</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          {/* Grid column */}
-          {/* Grid column */}
-          <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-            {/* Links */}
-            <h6 className="text-uppercase fw-bold mb-4">Categories</h6>
-            <p>
-              Gaming
-            </p>
-            <p>
-             Animations
-            </p>
-            <p>
-              Vlogings
-            </p>
-            <p>
-             Entertainment
-            </p>
+          <div className="footer-content pt-5 pb-5">
+            <div className="row">
+              <div className="col-xl-4 col-lg-4 mb-50">
+                <div className="footer-widget">
+                  <div className="footer-logo d-flex">
+                    <a href="index.html">
+                      <img
+                        src={Logo}
+                        className="img-fluid"
+                        alt="logo"
+                      />
+                     
+                    </a>
+                    <h3 className="text-white pt-2">YTSHOPINDIA</h3>
+                  </div>
+                  <div className="footer-text">
+                    <p>
+                     Ytshopindia is a marketplace that allows users to buy and
+                      sell YouTube channels. It offers a platform for YouTube
+                      creators and businesses to find and purchase established
+                      channels with a proven track record of success.
+                    </p>
+                  </div>
+                  <div className="footer-social-icon">
+                    <span>Follow us</span>
+                    <a href="#">
+                      <i className="fab fa-facebook-f facebook-bg" />
+                    </a>
+                    <a href="#">
+                      <i className="fab fa-twitter twitter-bg" />
+                    </a>
+                    <a href="#">
+                      <i className="fab fa-google-plus-g google-bg" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="col-xl-4 col-lg-4 col-md-6 mb-30">
+                <div className="footer-widget">
+                  <div className="footer-widget-heading">
+                    <h3>Useful Links</h3>
+                  </div>
+                  <ul>
+                    <li>
+                      <a href="#">Home</a>
+                    </li>
+                    <li>
+                      <a href="#">About</a>
+                    </li>
+                    <li>
+                      <a href="#">Contact</a>
+                    </li>
+                    <li>
+                      <a href="#">How to buy</a>
+                    </li>
+                    <li>
+                      <a href="#"> How to sell</a>
+                    </li>
+                    <li>
+                      <a href="#">Blogs</a>
+                    </li>
+                  
+                  
+                  </ul>
+                </div>
+              </div>
+              <div className="col-xl-4 col-lg-4 col-md-6 mb-50">
+                <div className="footer-widget">
+                  <div className="footer-widget-heading">
+                    <h3>Subscribe</h3>
+                  </div>
+                  <div className="footer-text mb-25">
+                    <p>
+                      Don’t miss to subscribe to our new feeds, kindly fill the
+                      form below.
+                    </p>
+                  </div>
+                  <div className="subscribe-form">
+                    <form action="#">
+                      <input type="text" placeholder="Email Address" />
+                      <button>
+                        <i className="fab fa-telegram-plane" />
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          {/* Grid column */}
-          {/* Grid column */}
-          <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-            {/* Links */}
-            <h6 className="text-uppercase fw-bold mb-4">Useful links</h6>
-            <p>
-             <Link to="#!" className="text-reset">
-                How to buy
-              </Link>
-            </p>
-            <p>
-             <Link to="#!" className="text-reset">
-                How to sell
-              </Link>
-            </p>
-            <p>
-             <Link to="#!" className="text-reset">
-                Buy
-              </Link>
-            </p>
-            <p>
-             <Link to="#!" className="text-reset">
-                Sell
-              </Link>
-            </p>
-          </div>
-          {/* Grid column */}
-          {/* Grid column */}
-          <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-            {/* Links */}
-            <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
-            <p>
-              <i className="fas fa-home me-3 text-secondary" /> New York, NY
-              10012, US
-            </p>
-            <p>
-              <i className="fas fa-envelope me-3 text-secondary" />
-              info@example.com
-            </p>
-            <p>
-              <i className="fas fa-phone me-3 text-secondary" /> + 01 234 567 88
-            </p>
-            <p>
-              <i className="fas fa-print me-3 text-secondary" /> + 01 234 567 89
-            </p>
-          </div>
-          {/* Grid column */}
         </div>
-        {/* Grid row */}
-      </div>
-    </section>
-    {/* Section: Links  */}
-    {/* Copyright */}
-    <div
-      className="text-center p-4"
-      style={{ backgroundColor: "rgba(0, 0, 0, 0.025)" }}
-    >
-      © {new Date().getFullYear()} Copyright:
-     <Link className="text-reset fw-bold" to="/">
-        YTSHOPINDIA.in
-      </Link>
-    </div>
-    {/* Copyright */}
-  </footer>
-  {/* Footer */}
-</>
-
+        <div className="copyright-area">
+          <div className="container">
+            <div className="row">
+              <div className="col-xl-6 col-lg-6 text-center text-lg-left">
+                <div className="copyright-text">
+                  <p>
+                    Copyright © {new Date().getFullYear()}, All Right Reserved{" "}
+                    <a href="#">YTSHOPINDIA.in</a>
+                  </p>
+                </div>
+              </div>
+              <div className="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                <div className="footer-menu">
+                  <ul>
+                    <li>
+                      <a href="#">Home</a>
+                    </li>
+                    <li>
+                      <a href="#">Terms</a>
+                    </li>
+                    <li>
+                      <a href="#">Privacy</a>
+                    </li>
+                    <li>
+                      <a href="#">Policy</a>
+                    </li>
+                    <li>
+                      <a href="#">Contact</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

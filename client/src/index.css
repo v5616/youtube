@@ -7,6 +7,7 @@
   color: #585860 !important;
 
 }
+
 @media (min-width: 768px) and (max-width: 1024px){
 .homecustom-container {
     max-width: 790px;
@@ -14,7 +15,7 @@
 
 /* new home  page  css*/
 .bannerimg{
-  background-image: url("./images/youtubemarketing2.png");
+  background-image: url("./images/banner-2.png");
   background-position: bottom;
     height: 500px;
     width: 100%;
@@ -120,13 +121,23 @@ opacity: 0.7;
   z-index: 9;
   top: -64px;
   left: 63px;
+  height:20rem;
   position: relative;
-  box-shadow: 3px 3px 3px 3px #ff532896;
+  box-shadow: 1px 1px 1px 1px #ff532896;
+  border-radius: 5px;
 }
 .latest_blog_pharagrah:hover {
-  box-shadow: 3px 3px 0px 0px #ff5328b5;
+  box-shadow: 3px 3px 3px 3px #ff532896;
   transition: all 0.3s linear 0s;
 }
+.latest_blog_pharagrah  h4{
+  font-size: 20px;
+  color:black
+}
+.latest_blog_pharagrah  p{
+  font-size: 16px;
+}
+
 /* Blog page css */
 .mobile-display{display:none}
 .desktop-display{display:block}
@@ -544,6 +555,11 @@ article p {
   font-size: 45px;
 }
 
+
+
+
+
+
 /* why homepage css */
 /* .row.serv_sec {
   padding: 0 0 0px 0;
@@ -684,4 +700,30 @@ article p {
   .recentblogheading{
     font-size: 16px;
   }
+  .dt-sc-title.with-two-border > *:before, .dt-sc-title.with-two-border > *:after {
+    content: "";
+    bottom: 0;
+    top: 0;
+    width: 0px;
+    height: 0px
+  }
+  .dt-sc-title.with-two-border > * {
+    font-size: 35px;
+    border-bottom:3px solid #ff5700 ;
+  }
+  .heading {
+    transform: translate(-60px, 24%);
+}
+.heading h1 {
+  font-size: 31px;
+}
+.bnr_btn .fill_btn {
+  padding: 12px 9px;
+}
+.home_details {
+  padding: 0px 0px;
+}
+.latest_blog_pharagrah {
+  padding: 15px;
+}
 }

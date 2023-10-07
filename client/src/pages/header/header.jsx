@@ -72,6 +72,12 @@ function Navbar() {
                 <h6 className={`${styles.navLink} m-0 `}>About</h6>{" "}
               </Link>
             </li>
+            <li className="text-nowrap"  onClick={removeActive}>
+              <Link to="/Contact" className={styles.navvlink}>
+                {" "}
+                <h6 className={`${styles.navLink} m-0 `}>Contact Us</h6>{" "}
+              </Link>
+            </li>
             <li className="text-nowrap" onClick={removeActive}>
               <Link to="/sell_Channel" className={styles.navvlink}>
                 {" "}
