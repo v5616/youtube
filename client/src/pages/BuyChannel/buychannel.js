@@ -25,8 +25,8 @@ const BuyYouTubechannel = () => {
               </Col>
             </Row>
             <Row className="m-0 p-0">
-              <Col lg={12} className="m-0 p-0 d-flex justify-content-center">
-                <p className="text-white  ">
+              <Col lg={12} className="m-0 p-0 d-flex justify-content-center ">
+                <p className="text-white d-flex align-items-sm-center ">
                   Want to Buy YouTube channel? We've got you covered! Our
                   platform has a bunch of great monetize Youtube channels for
                   you to choose from. Get ready to grow online with the help of
