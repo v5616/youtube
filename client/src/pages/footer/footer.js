@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../images/footerlogo.png";
-import "./style.css"
+import "./style.css";
 const Footer = () => {
   return (
     <>
@@ -44,18 +44,13 @@ const Footer = () => {
                 <div className="footer-widget">
                   <div className="footer-logo d-flex">
                     <a href="index.html">
-                      <img
-                        src={Logo}
-                        className="img-fluid"
-                        alt="logo"
-                      />
-                     
+                      <img src={Logo} className="img-fluid" alt="logo" />
                     </a>
                     <h3 className="text-white pt-2">YTSHOPINDIA</h3>
                   </div>
                   <div className="footer-text">
                     <p>
-                     Ytshopindia is a marketplace that allows users to buy and
+                      Ytshopindia is a marketplace that allows users to buy and
                       sell YouTube channels. It offers a platform for YouTube
                       creators and businesses to find and purchase established
                       channels with a proven track record of success.
@@ -82,25 +77,23 @@ const Footer = () => {
                   </div>
                   <ul>
                     <li>
-                      <a href="#">Home</a>
+                      <a href="/">Home</a>
                     </li>
                     <li>
-                      <a href="#">About</a>
+                      <a href="/about"> About</a>
                     </li>
                     <li>
-                      <a href="#">Contact</a>
+                      <a href="/contact"> Contact</a>
                     </li>
                     <li>
-                      <a href="#">How to buy</a>
+                      <a href="/buy_channel"> How to buy</a>
                     </li>
                     <li>
-                      <a href="#"> How to sell</a>
+                      <a href="/sell_YouTubeChannel"> How to sell</a>
                     </li>
                     <li>
-                      <a href="#">Blogs</a>
+                      <a href="/blogs"> Blogs</a>
                     </li>
-                  
-                  
                   </ul>
                 </div>
               </div>
@@ -143,19 +136,19 @@ const Footer = () => {
                 <div className="footer-menu">
                   <ul>
                     <li>
-                      <a href="#">Home</a>
+                      <a href="/">Home</a>
                     </li>
                     <li>
-                      <a href="#">Terms</a>
+                      <a href="/terms&condition">Terms & Condition</a>
                     </li>
                     <li>
-                      <a href="#">Privacy</a>
+                      <a href="/privacy_Policy">Privacy Policy</a>
                     </li>
                     <li>
-                      <a href="#">Policy</a>
+                      <a href="/refund_Policy"> Refund Policy</a>
                     </li>
                     <li>
-                      <a href="#">Contact</a>
+                      <a href="/contact">Contact</a>
                     </li>
                   </ul>
                 </div>

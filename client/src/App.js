@@ -12,6 +12,10 @@ import Contact from './pages/ContactUs/contact';
 import Footer from './pages/footer/footer';
 import Wtsapp from './pages/wtsapp';
 import Detailpage from './pages/Home/detailpage';
+import TermCondition from './pages/Term&Condition/termCondition';
+import Refundpolicy from './pages/RefundPolicy/refundpolicy';
+import Privacypolicy from './pages/Privacy&Policy/privacypolicy';
+import Movechannel from './pages/HowTo/movechannel';
 function App() {
   return (
     <>
@@ -23,10 +27,14 @@ function App() {
       <Route path="/blogs" element={<Blogs />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
-      <Route path="/Detailpage" element={<Detailpage />} />
+      <Route path="/detailpage" element={<Detailpage />} />
+      <Route path ="/terms&condition" element={<TermCondition/>}/>
+      <Route path ="/refund_Policy" element={<Refundpolicy/>}/>
+      <Route path ="/privacy_Policy" element={<Privacypolicy/>}/>
       <Route path="/buy_YouTubechannel" element={<BuyYouTubeChannel/>} />
       <Route path="/sell_Channel" element={<SellChannel />} />
       <Route path="/buy_channel" element={<Buychannel />} />
+      <Route path="/move_channel" element={<Movechannel />} />
       <Route path="/sell_YouTubeChannel" element={<SellYouTubechannel />} />
     </Routes>
     <Footer/>

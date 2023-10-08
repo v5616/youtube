@@ -1,7 +1,11 @@
 import React from "react";
 import { Button, Container } from "react-bootstrap";
 import whatsapp from "../../images/whatsapp.png";
-
+import "../../../node_modules/react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
+import imageone from "../../images/Screenshotthree.png";
+import imagetwo from "../../images/Screenshottwo.png";
+import imagethree from "../../images/Screenshotone.png";
 const Detailpage = () => {
   const FAQ = [
     {
@@ -11,7 +15,8 @@ const Detailpage = () => {
     },
     {
       question: "How can I get more information about the channel? ",
-      answer: "Looking for More Information Before You Buy a Channel? Simply Request it! Our Team Will Provide You with All the Details You Need. In Some Cases, a 10% Advance Payment May Be Requested for Privacy Purposes, but Rest Assured that it's Fully Refundable if You Decide Not to Buy.",
+      answer:
+        "Looking for More Information Before You Buy a Channel? Simply Request it! Our Team Will Provide You with All the Details You Need. In Some Cases, a 10% Advance Payment May Be Requested for Privacy Purposes, but Rest Assured that it's Fully Refundable if You Decide Not to Buy.",
     },
     {
       question: "How long does it take to receive the channel after payment? ",
@@ -19,25 +24,46 @@ const Detailpage = () => {
         "As Soon as Your Payment is Received, We'll Initiate the Transfer Process. In Most Cases, You Can Expect to Receive the Channel within 30 Minutes. However, Depending on Circumstances, it May Take Up to 24 Hours for the Transfer to Complete.        ",
     },
     {
-      question: "Can I Instantly Start Working on My Purchased YouTube Channel ?  ",
+      question:
+        "Can I Instantly Start Working on My Purchased YouTube Channel ?  ",
       answer:
-"Yes, once you have successfully purchased a YouTube channel and the transfer process has been completed, you can instantly start managing it as the new owner."    },
+        "Yes, once you have successfully purchased a YouTube channel and the transfer process has been completed, you can instantly start managing it as the new owner.",
+    },
     {
       question: "How will I receive the channel after payment? ? ",
       answer:
-"After We Receive Your Payment, We'll Ask You to Provide the Gmail Address Where You'd Like to Receive the Channel. Then, We'll Send You an Ownership Request on That Gmail, Allowing You to Take Control of Your New Channel Quickly and Easily."    },
+        "After We Receive Your Payment, We'll Ask You to Provide the Gmail Address Where You'd Like to Receive the Channel. Then, We'll Send You an Ownership Request on That Gmail, Allowing You to Take Control of Your New Channel Quickly and Easily.",
+    },
     {
       question: "How do I make the payment for the channel? ",
       answer:
-"We offer a range of payment options including UPI, bank transfer, and Paypal, to make the process as convenient as possible for you. Simply choose the method that works best for you and we will take care of the rest."    },
+        "We offer a range of payment options including UPI, bank transfer, and Paypal, to make the process as convenient as possible for you. Simply choose the method that works best for you and we will take care of the rest.",
+    },
   ];
 
   return (
     <>
-      <Container>
+      <Container className="my-4">
         <div className="row">
-          <div className="col-md-7 col-lg-7 col-sm-12">
-            <div><h3 className="text-center text-dark">Frequently Asked Questions</h3></div>
+          <div className="col-md-7 col-lg-7 col-sm-12 mb-5">
+            <div>
+              <Carousel>
+                <div>
+                  <img src={imageone} />
+                </div>
+                <div>
+                  <img src={imagetwo} />
+                </div>
+                <div>
+                  <img src={imagethree} />
+                </div>
+              </Carousel>
+            </div>
+            <div>
+              <h3 className="text-center text-dark">
+                Frequently Asked Questions
+              </h3>
+            </div>
             <div className="faq">
               {FAQ.map((question) => (
                 <details open={FAQ.indexOf(question) == 0}>
@@ -46,7 +72,6 @@ const Detailpage = () => {
                 </details>
               ))}
             </div>
-            
           </div>
           <div className="col-md-5 col-lg-5 col-sm-12 mt-3 mt-md-0 mt-lg-0">
             <div
