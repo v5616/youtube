@@ -1,5 +1,6 @@
 import React from "react";
 import { Row, Col, Container } from "react-bootstrap";
+import Footer from "../footer/footer";
 const About = () => {
   return (
     <>
@@ -102,6 +103,7 @@ const About = () => {
           </div>
         </Container>
       </div>
+      <Footer/>
     </>
   );
 };

@@ -24,6 +24,9 @@ import imagethird from "../../images/thirdcardimg.png";
 import imagefourth from "../../images/fourthcardimg.png";
 import "../../../node_modules/react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Footer from "../footer/footer";
 const Home = () => {
   const [data, setData] = useState([]);
   const [loader, setLoader] = useState(false);
@@ -41,6 +44,9 @@ const Home = () => {
 
   useEffect(() => {
     getProducts();
+  }, []);
+  useEffect(() => {
+    AOS.init();
   }, []);
 
   return (
@@ -78,11 +84,11 @@ const Home = () => {
           <div className="bannerimg">
             <div className="bannercolor"></div>
             <Container>
-              <div className="heading">
+              <div className="heading" >
                 <h1 className="text-white">
                   The Most Trusted Platform to <br />
                   <span> Buy &amp; Sell </span> Established <br />
-                  <b>Youtube Channel</b>
+                  <b data-aos="zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">Youtube Channel</b>
                 </h1>
                 <div className="bnr_btn">
                   <Link to="/buy_channel">
@@ -156,7 +162,7 @@ const Home = () => {
             </Container>
           </section>
           <Container className="mt-2">
-            <div className="dt-sc-title with-two-border text-center pb-2">
+            <div className="dt-sc-title with-two-border text-center pb-2" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
               <h3 className=" text-center">Recently Listed Channels</h3>
             </div>
             <div className="chnl_grid row mt-">
@@ -253,11 +259,11 @@ const Home = () => {
           <section></section>
           <div className="mt-4 why_ytshopindia">
             <div className="container">
-              <div className="dt-sc-title with-two-border text-center pb-2 display-none ">
+              <div className="dt-sc-title with-two-border text-center pb-2 display-none " data-aos="fade-zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
                 <h2 style={{}}> WHY YTSHOPINDIA</h2>
               </div>
               <div className="row serv_sec why pt-2">
-                <div className="chl_det col-md-6 col-sm-12 col-lg-4">
+                <div className="chl_det col-md-6 col-sm-12 col-lg-4" data-aos="zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
                   <div className="srv text-center">
                     <span>
                       <img className="rotate_img" src={verified} />
@@ -271,7 +277,7 @@ const Home = () => {
                     </p>
                   </div>
                 </div>
-                <div className="chl_det col-md-6 col-sm-12 col-lg-4">
+                <div className="chl_det col-md-6 col-sm-12 col-lg-4" data-aos="zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
                   <div className="srv text-center">
                     <span>
                       <img className="rotate_img" src={privacy} />
@@ -285,7 +291,7 @@ const Home = () => {
                     </p>
                   </div>
                 </div>
-                <div className="chl_det col-md-6 col-sm-12 col-lg-4">
+                <div className="chl_det col-md-6 col-sm-12 col-lg-4" data-aos="zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
                   <div className="srv text-center">
                     {" "}
                     <span>
@@ -301,7 +307,7 @@ const Home = () => {
                     </p>
                   </div>
                 </div>
-                <div className="chl_det col-md-6 col-sm-12 col-lg-4">
+                <div className="chl_det col-md-6 col-sm-12 col-lg-4" data-aos="zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
                   <div className="srv text-center">
                     {" "}
                     <span>
@@ -317,7 +323,7 @@ const Home = () => {
                     </p>
                   </div>
                 </div>
-                <div className="chl_det col-md-6 col-sm-12 col-lg-4">
+                <div className="chl_det col-md-6 col-sm-12 col-lg-4" data-aos="zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
                   <div className="srv text-center">
                     {" "}
                     <span>
@@ -333,7 +339,7 @@ const Home = () => {
                     </p>
                   </div>
                 </div>
-                <div className="chl_det col-md-6 col-sm-12 col-lg-4">
+                <div className="chl_det col-md-6 col-sm-12 col-lg-4" data-aos="zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
                   <div className="srv text-center">
                     {" "}
                     <span>
@@ -355,7 +361,7 @@ const Home = () => {
           <div>
           <Container className="my-4" style={{backgroundColor:"#80808014" , boxShadow: "0px 0px 20px 0px rgb(0 0 0 / 5%)"}}>
             <Row>
-              <div className="dt-sc-title with-two-border text-center pb-2 mt-2">
+              <div className="dt-sc-title with-two-border text-center pb-2 mt-2" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
                 <h2 style={{}}> Blogs</h2>
               </div>
               <Row>
@@ -431,7 +437,7 @@ const Home = () => {
           </div>
 
           <Container>
-            <div className="dt-sc-title with-two-border text-center pb-2">
+            <div className="dt-sc-title with-two-border text-center pb-2" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
               <h2 style={{}}> Customer's Reviews</h2>
             </div>
             <Carousel swipeable={true}>
@@ -483,6 +489,7 @@ const Home = () => {
           </Container>
         </>
       )}
+      {/* <Footer/> */}
     </>
   );
 };
