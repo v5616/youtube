@@ -184,7 +184,7 @@ const Home = () => {
                               height={533}
                             />
                             <div className="image-overlay">
-                            <Link to ="/Detailpage"  ><span className="view-image-text">
+                            <Link to ="/detailpage"  ><span className="view-image-text">
                                 View Details
                               </span></Link>
                             </div>

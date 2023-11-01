@@ -1,6 +1,14 @@
 const express = require('express');
 const router = express.Router()
-const Product = require("../Models/Producs.model")
+const multer = require('multer')
+const Product = require("../Models/Producs.model");
+const s3upload = require("../Middleware/s3uplod");
+const storage = multer.diskStorage({
+
+});
+
+//@function for seperating (form data)data
+const upload = multer({ storage: storage });
 
 router.get('/',  async(req, res)=>{
     try {
@@ -19,8 +27,11 @@ router.get('/',  async(req, res)=>{
     }
 })
 
-router.post("/",(req,res)=>{
+router.post("/",upload.single('file'),async (req,res)=>{
     // console.log(req.body)
+    if(req.file){
+       var s3image = await s3upload.uploadS3(req.file)
+    }
     const Producs = new Product({
         name: req.body.name,
         revenue:req.body.revenue,
@@ -28,7 +39,8 @@ router.post("/",(req,res)=>{
         monetized  :req.body.monetized,
         language:req.body.language,
         category:req.body.category,
-        tag:req.body.tag
+        tag:req.body.tag,
+        image:s3image
     })
     Producs.save()
     .then(result=>{
