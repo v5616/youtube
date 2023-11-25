@@ -45,17 +45,17 @@ function Navbar() {
                 <NavDropdown title="How To" id="basic-nav-dropdown">
                   <Link to="/buy_channel" className={styles.navvlink}>
                     <NavDropdown.Item  className="fw-8" onClick={removeActive}>
-                 <Link to ="/buy_channel"> Buy YouTube Channel</Link>     
+                      Buy YouTube Channel
                     </NavDropdown.Item>
                   </Link>
                   <Link to="/sell_YouTubeChannel" className={styles.navvlink}>
                     
                     <NavDropdown.Item hr className="fw-8" onClick={removeActive}>
-                   <Link to ="/sell_YouTubeChannel">Sell YouTube Channel</Link> 
+                      Sell YouTube Channel
                     </NavDropdown.Item>
                   </Link>
                   <NavDropdown.Item className="fw-8" onClick={removeActive}>
-                 <Link to="/move_channel"> Move Channel to Brand Account</Link>  
+                    Move Channel to Brand Account
                   </NavDropdown.Item>
                 </NavDropdown>
               </h6>

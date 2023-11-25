@@ -1,6 +1,6 @@
 import React from "react";
 import { Row, Col, Container } from "react-bootstrap";
-import headphone from "../../images/headphones.png"
+import Footer from "../footer/footer";
 const About = () => {
   return (
     <>
@@ -52,12 +52,6 @@ const About = () => {
                       </Col>
                     </Row>
                     <Row>
-                    <Col className="text-center">
-                      <img src={headphone}/>
-                      </Col>
-                    </Row>
-                    <Row className="">
-                      
                       <Col className="text-center getsupportLine ">
                         <h4>Get Support</h4>
                       </Col>
@@ -109,7 +103,7 @@ const About = () => {
           </div>
         </Container>
       </div>
-        
+      <Footer/>
     </>
   );
 };

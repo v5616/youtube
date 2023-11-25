@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link ,useNavigate} from "react-router-dom";
 import axios from "axios";
 import { API_URL } from "../../config/api";
 import { Row, Col, Container, Card, Button } from "react-bootstrap";
@@ -27,7 +27,9 @@ import { Carousel } from "react-responsive-carousel";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Footer from "../footer/footer";
+const sampleimage = "https://channelkart.com/admin/images/TL1677956445.jpg"
 const Home = () => {
+  const Navigate = useNavigate()
   const [data, setData] = useState([]);
   const [loader, setLoader] = useState(false);
   const getProducts = async () => {
@@ -48,6 +50,7 @@ const Home = () => {
   useEffect(() => {
     AOS.init();
   }, []);
+  console.log(data,":sddsdsfds")
 
   return (
     <>
@@ -55,40 +58,22 @@ const Home = () => {
         <Skeleton count={100} />
       ) : (
         <>
-          {/* <section id="home_bnr">
-        <div className="container">
-          <div className="row bnr_cnt">
-            <div className="col-md-7">
-              <h1>
-                The Most Trusted Platform to <br />{" "}
-                <span> Buy &amp; Sell </span> Established <br />{" "}
-                <b>Youtube Channel</b>{" "}
-              </h1>
-              <div className="bnr_btn">
-                <Link to="/buy_channel">
-                  <Button className="fill_btn">Buy Channel</Button>
-                </Link>
-                <Link to="/sell_YouTubeChannel">
-                  <Button className="fill_btn sell-btn">Sell Channel</Button>
-                </Link>
-              </div>
-            </div>
-            <div className="col-md-5">
-              {" "}
-              <img alt="" className="w-100" src={imagefirst} />{" "}
-            </div>
-          </div>
-        </div>
-       
-      </section> */}
+          
           <div className="bannerimg">
             <div className="bannercolor"></div>
             <Container>
-              <div className="heading" >
+              <div className="heading">
                 <h1 className="text-white">
                   The Most Trusted Platform to <br />
                   <span> Buy &amp; Sell </span> Established <br />
-                  <b data-aos="zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">Youtube Channel</b>
+                  <b
+                    data-aos="zoom-in"
+                    data-aos-offset="200"
+                    data-aos-easing="ease-in-sine"
+                    data-aos-duration="600"
+                  >
+                    Youtube Channel
+                  </b>
                 </h1>
                 <div className="bnr_btn">
                   <Link to="/buy_channel">
@@ -162,7 +147,13 @@ const Home = () => {
             </Container>
           </section>
           <Container className="mt-2">
-            <div className="dt-sc-title with-two-border text-center pb-2" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
+            <div
+              className="dt-sc-title with-two-border text-center pb-2"
+              data-aos="fade-up"
+              data-aos-offset="200"
+              data-aos-easing="ease-in-sine"
+              data-aos-duration="600"
+            >
               <h3 className=" text-center">Recently Listed Channels</h3>
             </div>
             <div className="chnl_grid row mt-">
@@ -171,22 +162,24 @@ const Home = () => {
                   <div className="chl_det col-md-6 col-sm-12 col-lg-4">
                     <div className="box_grid cnl-slide">
                       <small style={{ backgroundColor: "#858501" }}>
-                        {ele.tag}
+                        {ele?.tag}
                       </small>
                       <figure className="hoverimg">
                         <Link to="#">
                           <div className="image-container">
                             <img
                               alt=""
-                              src="https://channelkart.com/admin/images/TL1677956445.jpg"
+                              src={ele?.image?ele.image:sampleimage}
                               className="img-fluid"
                               width={800}
                               height={533}
                             />
                             <div className="image-overlay">
-                            <Link to ="/detailpage"  ><span className="view-image-text">
-                                View Details
-                              </span></Link>
+                              <Link to="/Detailpage">
+                                <span className="view-image-text">
+                                  View Details
+                                </span>
+                              </Link>
                             </div>
                           </div>
                           {/*--- <div class="read_more"><span>Read more</span></div>*/}
@@ -215,7 +208,7 @@ const Home = () => {
                           <span className="ps-2">
                             <h4>Category</h4>
                             <p style={{ textTransform: "capitalize" }}>
-                              {ele?.category}
+                              {ele?.category?.name}
                             </p>
                           </span>
                         </div>
@@ -223,7 +216,7 @@ const Home = () => {
                           <img alt="" className="w-25" src={lang} />
                           <span className="ps-2">
                             <h4>Language</h4>
-                            <p>{ele?.language}</p>
+                            <p>{ele?.language?.name}</p>
                           </span>
                         </div>
                         <div className="pts">
@@ -244,7 +237,7 @@ const Home = () => {
               })}
             </div>
             <div className="text-center">
-              <Button
+              <Button onClick={()=>Navigate("buy_YouTubechannel")}
                 style={{
                   borderRadius: "50px",
                   backgroundColor: "#1e3f55",
@@ -259,11 +252,23 @@ const Home = () => {
           <section></section>
           <div className="mt-4 why_ytshopindia">
             <div className="container">
-              <div className="dt-sc-title with-two-border text-center pb-2 display-none " data-aos="fade-zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
+              <div
+                className="dt-sc-title with-two-border text-center pb-2 display-none "
+                data-aos="fade-zoom-in"
+                data-aos-offset="200"
+                data-aos-easing="ease-in-sine"
+                data-aos-duration="600"
+              >
                 <h2 style={{}}> WHY YTSHOPINDIA</h2>
               </div>
               <div className="row serv_sec why pt-2">
-                <div className="chl_det col-md-6 col-sm-12 col-lg-4" data-aos="zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
+                <div
+                  className="chl_det col-md-6 col-sm-12 col-lg-4"
+                  data-aos="zoom-in"
+                  data-aos-offset="200"
+                  data-aos-easing="ease-in-sine"
+                  data-aos-duration="600"
+                >
                   <div className="srv text-center">
                     <span>
                       <img className="rotate_img" src={verified} />
@@ -277,7 +282,13 @@ const Home = () => {
                     </p>
                   </div>
                 </div>
-                <div className="chl_det col-md-6 col-sm-12 col-lg-4" data-aos="zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
+                <div
+                  className="chl_det col-md-6 col-sm-12 col-lg-4"
+                  data-aos="zoom-in"
+                  data-aos-offset="200"
+                  data-aos-easing="ease-in-sine"
+                  data-aos-duration="600"
+                >
                   <div className="srv text-center">
                     <span>
                       <img className="rotate_img" src={privacy} />
@@ -291,7 +302,13 @@ const Home = () => {
                     </p>
                   </div>
                 </div>
-                <div className="chl_det col-md-6 col-sm-12 col-lg-4" data-aos="zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
+                <div
+                  className="chl_det col-md-6 col-sm-12 col-lg-4"
+                  data-aos="zoom-in"
+                  data-aos-offset="200"
+                  data-aos-easing="ease-in-sine"
+                  data-aos-duration="600"
+                >
                   <div className="srv text-center">
                     {" "}
                     <span>
@@ -307,7 +324,13 @@ const Home = () => {
                     </p>
                   </div>
                 </div>
-                <div className="chl_det col-md-6 col-sm-12 col-lg-4" data-aos="zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
+                <div
+                  className="chl_det col-md-6 col-sm-12 col-lg-4"
+                  data-aos="zoom-in"
+                  data-aos-offset="200"
+                  data-aos-easing="ease-in-sine"
+                  data-aos-duration="600"
+                >
                   <div className="srv text-center">
                     {" "}
                     <span>
@@ -323,7 +346,13 @@ const Home = () => {
                     </p>
                   </div>
                 </div>
-                <div className="chl_det col-md-6 col-sm-12 col-lg-4" data-aos="zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
+                <div
+                  className="chl_det col-md-6 col-sm-12 col-lg-4"
+                  data-aos="zoom-in"
+                  data-aos-offset="200"
+                  data-aos-easing="ease-in-sine"
+                  data-aos-duration="600"
+                >
                   <div className="srv text-center">
                     {" "}
                     <span>
@@ -339,7 +368,13 @@ const Home = () => {
                     </p>
                   </div>
                 </div>
-                <div className="chl_det col-md-6 col-sm-12 col-lg-4" data-aos="zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
+                <div
+                  className="chl_det col-md-6 col-sm-12 col-lg-4"
+                  data-aos="zoom-in"
+                  data-aos-offset="200"
+                  data-aos-easing="ease-in-sine"
+                  data-aos-duration="600"
+                >
                   <div className="srv text-center">
                     {" "}
                     <span>
@@ -359,85 +394,102 @@ const Home = () => {
             </div>
           </div>
           <div>
-          <Container className="my-4" style={{backgroundColor:"#80808014" , boxShadow: "0px 0px 20px 0px rgb(0 0 0 / 5%)"}}>
-            <Row>
-              <div className="dt-sc-title with-two-border text-center pb-2 mt-2" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
-                <h2 style={{}}> Blogs</h2>
-              </div>
+            <Container
+              className="my-4"
+              style={{
+                backgroundColor: "#80808014",
+                boxShadow: "0px 0px 20px 0px rgb(0 0 0 / 5%)",
+              }}
+            >
               <Row>
-                <Col>
-                  <p className="text-center" style={{ fontSize: "23px" }}>
-                    The latest trends in the digital market
-                  </p>
-                </Col>
-              </Row>
-              <div className="row">
-                <div className="col-12 d-md-flex d-lg-flex">
-                  <div className="col-md-4 col-lg-4 col-sm-12">
-                    <div className="latest_blog_img text-center">
-                      <img
-                        style={{ width: "95%", borderRadius: "8px" }}
-                        className=" h-100"
-                        src={imagesecond}
-                      />
+                <div
+                  className="dt-sc-title with-two-border text-center pb-2 mt-2"
+                  data-aos="fade-up"
+                  data-aos-offset="200"
+                  data-aos-easing="ease-in-sine"
+                  data-aos-duration="600"
+                >
+                  <h2 style={{}}> Blogs</h2>
+                </div>
+                <Row>
+                  <Col>
+                    <p className="text-center" style={{ fontSize: "23px" }}>
+                      The latest trends in the digital market
+                    </p>
+                  </Col>
+                </Row>
+                <div className="row">
+                  <div className="col-12 d-md-flex d-lg-flex">
+                    <div className="col-md-4 col-lg-4 col-sm-12">
+                      <div className="latest_blog_img text-center">
+                        <img
+                          style={{ width: "95%", borderRadius: "8px" }}
+                          className=" h-100"
+                          src={imagesecond}
+                        />
+                      </div>
+                      <div className="latest_blog_pharagrah">
+                        <h4> How to move youtube channel to brand account?</h4>
+                        <p>
+                          {" "}
+                          Moving a YouTube channel to brand account can be easy,
+                          but it also involves some risk. Typically, people use
+                          this process to either transfer their..
+                        </p>
+                      </div>
                     </div>
-                    <div className="latest_blog_pharagrah">
-                      <h4> How to move youtube channel to brand account?</h4>
-                      <p>
-                        {" "}
-                        Moving a YouTube channel to brand account can be easy,
-                        but it also involves some risk. Typically, people use
-                        this process to either transfer their..
-                      </p>
+                    <div className="col-md-4 col-lg-4 col-sm-12">
+                      <div className="latest_blog_img text-center">
+                        <img
+                          style={{ width: "95%", borderRadius: "8px" }}
+                          className=" h-100"
+                          src={imagethird}
+                        />
+                      </div>
+                      <div className="latest_blog_pharagrah">
+                        <h4>
+                          Benefits of Buying A YouTube Channel From ChannelKart
+                        </h4>
+                        <p>
+                          {" "}
+                          When it comes to building a successful YouTube
+                          channel, starting from scratch can be a time-consuming
+                          and challenging process. But what if there was..
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="col-md-4 col-lg-4 col-sm-12">
-                    <div className="latest_blog_img text-center">
-                      <img
-                        style={{ width: "95%", borderRadius: "8px" }}
-                        className=" h-100"
-                        src={imagethird}
-                      />
-                    </div>
-                    <div className="latest_blog_pharagrah">
-                      <h4>
-                        Benefits of Buying A YouTube Channel From ChannelKart
-                      </h4>
-                      <p>
-                        {" "}
-                        When it comes to building a successful YouTube channel,
-                        starting from scratch can be a time-consuming and
-                        challenging process. But what if there was..
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-md-4 col-lg-4 col-sm-12">
-                    <div className="latest_blog_img text-center">
-                      <img
-                        style={{ width: "95%", borderRadius: "8px" }}
-                        className=" h-100"
-                        src={imagefourth}
-                      />
-                    </div>
-                    <div className="latest_blog_pharagrah">
-                      <h4> How To Earn Money From YouTube?</h4>
-                      <p>
-                        {" "}
-                        YouTube has become a major source of entertainment and
-                        information for people worldwide. With over 2 billion
-                        active monthly users, it's no wonder..
-                      </p>
+                    <div className="col-md-4 col-lg-4 col-sm-12">
+                      <div className="latest_blog_img text-center">
+                        <img
+                          style={{ width: "95%", borderRadius: "8px" }}
+                          className=" h-100"
+                          src={imagefourth}
+                        />
+                      </div>
+                      <div className="latest_blog_pharagrah">
+                        <h4> How To Earn Money From YouTube?</h4>
+                        <p>
+                          {" "}
+                          YouTube has become a major source of entertainment and
+                          information for people worldwide. With over 2 billion
+                          active monthly users, it's no wonder..
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </Row>
-          </Container>
-
+              </Row>
+            </Container>
           </div>
 
           <Container>
-            <div className="dt-sc-title with-two-border text-center pb-2" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
+            <div
+              className="dt-sc-title with-two-border text-center pb-2"
+              data-aos="fade-up"
+              data-aos-offset="200"
+              data-aos-easing="ease-in-sine"
+              data-aos-duration="600"
+            >
               <h2 style={{}}> Customer's Reviews</h2>
             </div>
             <Carousel swipeable={true}>
