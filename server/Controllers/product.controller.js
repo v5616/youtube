@@ -40,7 +40,6 @@ const postProducts = async (req, res) => {
     tag: req.body.tag,
   });
   Producs.save().then((result) => {
-    console.log(result, "ddddddddddddddd");
   });
   res.status(200).send({ status: 200, message: "successfully created" });
 };
