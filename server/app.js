@@ -1,15 +1,16 @@
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 
 const app = express();
 app.use(cors());
-const port = 4000;
+const port = process.env.PORT || 4000;
 app.use(express.json());
 
 mongoose
   .connect(
-    "mongodb+srv://cluster0.vrtqway.mongodb.net/?retryWrites=true&w=majority",
+    `${process.env.MONGO_URL}`,
     {
       dbName: "youtube",
       user: "vishal",
