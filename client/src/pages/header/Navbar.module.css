@@ -104,6 +104,7 @@
       transition: 0.7s ease-in-out;
       background-color: aliceblue;
       padding: 10px;
+      z-index: 3;
     }
   
     .navMenu.active{
